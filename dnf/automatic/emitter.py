@@ -33,7 +33,7 @@ APPLIED = _("The following updates have been applied on '%s':")
 APPLIED_TIMESTAMP = _("Updates completed at %s")
 AVAILABLE = _("The following updates are available on '%s':")
 DOWNLOADED = _("The following updates were downloaded on '%s':")
-ERROR = _("An error has occured on: '%s'")
+ERROR = _("An error has occurred on: '%s'")
 
 logger = logging.getLogger('dnf')
 
@@ -90,7 +90,7 @@ class EmailEmitter(Emitter):
 
     def _prepare_msg(self):
         if self._error:
-            subj = _("An error has occured on '%s'.") % self._system_name
+            subj = _("An error has occurred on '%s'.") % self._system_name
         elif self._applied:
             subj = _("Updates applied on '%s'.") % self._system_name
         elif self._downloaded:
